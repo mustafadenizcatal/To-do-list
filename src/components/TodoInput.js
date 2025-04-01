@@ -15,13 +15,13 @@ function TodoInput({ addTodo }) {
         value={task}
         onChange={(e) => setTask(e.target.value)}
         className="p-2 border rounded"
-        placeholder="Yeni görev ekle..."
+        placeholder="Add new task..."
       />
       <button
         onClick={handleAdd}
         className="px-2 py-1 bg-purple-500 text-white rounded"
       >
-        Ekle
+        Add
       </button>
     </div>
   );

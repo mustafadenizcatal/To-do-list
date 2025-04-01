@@ -1,21 +1,30 @@
-# Yapılacaklar Listesi Projesi
+# To-Do List
 
-Bu proje, günlük yapılacak görevlerinizi düzenlemenize ve takip etmenize yardımcı olan bir yapılacaklar listesi uygulamasıdır. Görev ekleyebilir, tamamlayabilir, düzenleyebilir ve silebilirsiniz. Tamamlanan görevler listelenir ve görev durumu gösterilir.
+This project is a simple to-do list application to help you organize and keep track of your daily tasks. You can add, complete, edit, and delete tasks. Completed tasks are marked and displayed separately, and the task status is shown.
 
-## 🚀 Özellikler
+## 🚀 Features
 
-- Görev ekleme ve silme
-- Görev tamamlama ve geri alma
-- Görev düzenleme
-- Görevleri filtreleme (Tümü, Tamamlananlar, Tamamlanmayanlar)
-- Görev sayacı (Toplam, Tamamlanan, Tamamlanmayan)
-- Modern ve kullanıcı dostu arayüz
-- Görev silme işlemi öncesinde onay isteme
+- Add and delete tasks
+- Mark tasks as complete or incomplete
+- Edit existing tasks
+- Filter tasks (All, Completed, Incomplete)
+- Task counter (Total, Completed, Incomplete)
+- Modern and user-friendly interface
+- Confirmation before deleting a task
 
-## 🛠️ Kullanılan Teknolojiler
+## 🛠️ Technologies Used
 
 - React.js
 - Tailwind CSS
 - HTML
 - CSS
 - JavaScript
+
+## 💻 Installation
+
+To clone and run this project locally, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/mustafadenizcatal/to-do-list.git
+   ```

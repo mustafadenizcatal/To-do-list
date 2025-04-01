@@ -47,13 +47,13 @@ function TodoList({ todos, toggleComplete, deleteTodo, updateTodo }) {
                 onClick={() => handleUpdate(todo.id)}
                 className="px-2 py-1 text-white bg-blue-500 rounded ml-2"
               >
-                Kaydet
+                Save
               </button>
               <button
                 onClick={() => setEditId(null)}
                 className="px-2 py-1 text-white bg-gray-500 rounded ml-2"
               >
-                İptal
+                Cancel
               </button>
             </>
           ) : (
@@ -62,13 +62,13 @@ function TodoList({ todos, toggleComplete, deleteTodo, updateTodo }) {
                 onClick={() => handleEdit(todo)}
                 className="px-2 py-1 text-white bg-yellow-500 rounded ml-2"
               >
-                Düzenle
+                Edit
               </button>
               <button
                 onClick={() => deleteTodo(todo.id)}
                 className="px-2 py-1 text-white bg-red-500 rounded ml-2"
               >
-                Sil
+                Delete
               </button>
             </>
           )}

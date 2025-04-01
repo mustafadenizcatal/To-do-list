@@ -44,15 +44,13 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="text-3xl font-bold mb-4 text-center">
-        Yapılacaklar Listesi
-      </h1>
+      <h1 className="text-3xl font-bold mb-4 text-center">To-Do-List</h1>
 
       {/* Görev Durumu */}
       <div className="mb-4 text-center">
-        <p className="text-lg font-semibold">Görev Durumu:</p>
+        <p className="text-lg font-semibold">Task Status:</p>
         <p>
-          Toplam: {totalCount} | Tamamlanan: {completedCount} | Tamamlanmayan:{" "}
+          Total: {totalCount} | Completed: {completedCount} | Incomplete:{" "}
           {incompleteCount}
         </p>
       </div>
@@ -63,19 +61,19 @@ function App() {
           onClick={() => setFilter("all")}
           className="px-2 py-1 bg-blue-500 text-white rounded"
         >
-          Tümü
+          Total
         </button>
         <button
           onClick={() => setFilter("completed")}
           className="px-2 py-1 bg-green-500 text-white rounded"
         >
-          Tamamlananlar
+          Completed
         </button>
         <button
           onClick={() => setFilter("incomplete")}
           className="px-2 py-1 bg-orange-500 text-white rounded"
         >
-          Tamamlanmayanlar
+          Incomplete
         </button>
       </div>
 
