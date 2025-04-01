@@ -1,4 +1,4 @@
-# Yapılacaklar Listesi
+# Yapılacaklar Listesi Projesi
 
 Bu proje, günlük yapılacak görevlerinizi düzenlemenize ve takip etmenize yardımcı olan bir yapılacaklar listesi uygulamasıdır. Görev ekleyebilir, tamamlayabilir, düzenleyebilir ve silebilirsiniz. Tamamlanan görevler listelenir ve görev durumu gösterilir.
 
