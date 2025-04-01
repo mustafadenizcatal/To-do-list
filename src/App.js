@@ -5,9 +5,14 @@ import TodoList from "./components/TodoList";
 function App() {
   const [todos, setTodos] = useState([]);
   const [filter, setFilter] = useState("all");
+  const totalCount = todos.length;
+  const completedCount = todos.filter((todo) => todo.completed).length;
+  const incompleteCount = todos.filter((todo) => !todo.completed).length;
 
-  const addTodo = (task) => {
+  const addTodo = (task, resetInput) => {
+    if (task.trim() === "") return; // Boş veya sadece boşluksa ekleme
     setTodos([...todos, { id: Date.now(), task, completed: false }]);
+    resetInput();
   };
 
   const toggleComplete = (id) => {
@@ -19,7 +24,9 @@ function App() {
   };
 
   const deleteTodo = (id) => {
-    setTodos(todos.filter((todo) => todo.id !== id));
+    if (window.confirm("Are you sure you want to delete this task?")) {
+      setTodos(todos.filter((todo) => todo.id !== id));
+    }
   };
 
   const updateTodo = (id, newTask) => {
@@ -37,10 +44,21 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="text-2xl font-bold mb-4">To-Do List</h1>
+      <h1 className="text-3xl font-bold mb-4 text-center">
+        Yapılacaklar Listesi
+      </h1>
+
+      {/* Görev Durumu */}
+      <div className="mb-4 text-center">
+        <p className="text-lg font-semibold">Görev Durumu:</p>
+        <p>
+          Toplam: {totalCount} | Tamamlanan: {completedCount} | Tamamlanmayan:{" "}
+          {incompleteCount}
+        </p>
+      </div>
 
       {/* Filtreleme Butonları */}
-      <div className="flex gap-2 mb-4">
+      <div className="flex justify-center gap-2 mb-4">
         <button
           onClick={() => setFilter("all")}
           className="px-2 py-1 bg-blue-500 text-white rounded"
@@ -55,7 +73,7 @@ function App() {
         </button>
         <button
           onClick={() => setFilter("incomplete")}
-          className="px-2 py-1 bg-yellow-500 text-white rounded"
+          className="px-2 py-1 bg-orange-500 text-white rounded"
         >
           Tamamlanmayanlar
         </button>

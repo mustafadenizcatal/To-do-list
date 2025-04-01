@@ -1,5 +1,9 @@
-.App {
-  text-align: center;
+body {
+  background-color: #f3f4f6; /* Hafif gri arka plan */
+  font-family: "Arial", sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 20px;
 }
 
 .editing {

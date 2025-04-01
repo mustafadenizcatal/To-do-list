@@ -14,3 +14,39 @@ code {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+button {
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px); /* Hafif yukarı kalkma efekti */
+  opacity: 0.9;
+}
+
+button:active {
+  transform: translateY(0); /* Basılınca eski yerine dönme */
+  opacity: 1;
+}
+
+input[type="text"] {
+  border: 2px solid #ddd;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff; /* Mavi vurgulu kenar */
+  outline: none;
+}
+
+.App {
+  max-width: 600px;
+  margin: auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
